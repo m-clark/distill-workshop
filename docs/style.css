@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Audiowide|Alex+Brush|Roboto+Condensed|Open+Sans|Lato|Lora|Fira+Sans|Yellowtail|Condiment|Mrs+Sheppards|Mr+Dafoe");
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,700);
+@import url(https://use.fontawesome.com/releases/v5.14.0/css/all.css);
+
+
+body { 
+  font-family: Roboto, 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif; 
+  font-size: 32pt;
+  
+}
+
+em {
+  color: #ECD078FF;
+  font-style: normal;
+  font-weight: 700;
+  text-shadow: 0 0 10px #EBA42BFF;
+}
+
+
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Yanone Kaffeesatz';
+  font-weight: normal;
+  color: #b20076;
+}
+
+.tidyverse {
+  background-size: cover;
+}
+
+.title-slide {
+  background-image: url(img/mountains.jpg);
+  background-size: cover;
+  vertical-align: middle;
+}
+
+.title-slide h1, h2, h3 {
+  font-family: Audiowide;
+  text-shadow: 0 0 10px #FF4E86;
+}
+
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+
+
+.inverse {
+  background-color: #542437FF; /*#1A1A1AFF*/
+  color: #d6d6d6;
+  text-shadow: 0 0 20px #333;
+}
+
+.inverse h1, .inverse h2, .inverse h3 {
+  color: #EBA42BFF; /*#b20076*/
+}
+
+.inverse h1 {
+  text-shadow: 0 0 5px #EBA42BFF; /*#b20076*/
+}
+
+.remark-slide-content {
+    font-size: 32px;
+}
+
+/* background of slide */
+.remark-slide-container {
+    display: block;
+    background-color: #422B3AFF;
+}
+
+.remark-slide-scaler {
+    box-shadow: 0 0 30px #EBA42BFF;
+}
+
+.remark-code, .remark-inline-code { 
+  font-family: 'Source Code Pro', 'Roboto Mono', 'Lucida Console', Monaco, monospace; 
+  
+}
+
+.remark-code-line-highlighted {
+    background-color: #EBEBEBFF;
+    color: #3f3f3f;
+}
+
+ul li ul li {
+  font-size: 80%;
+}
+
+blockquote {
+  border-left: solid 5px #EBA42BFF;
+  font-size: 80%;
+}
+
+div.center {
+ text-align: center; 
+}
+
+.smaller90 {
+    font-size: 90%;
+}
+
+.smaller50 {
+    font-size: 50%;
+}
+
+/* names */
+
+.pack {
+  color: #1f65b7;
+}
+
+.func {
+  color: #ECD078FF;
+}
+
+/* forumulas */
+.remark-slide .mjx-chtml {
+  font-size: 80%; 
+}
+
+/* inline */
+.remark-slide .mjx-char {
+  
+}
+
+/* title slide */
+.title {
+  margin-bottom: 0;
+  font-size: 50pt;  
+  position: relative;
+  color: #CB54D6;
+  bottom: 50px;
+  display: inline-block;
+}
+.subtitle {
+  font-size: 28pt;
+  position: relative;
+  color: #57B4AEFF;
+  bottom: 75px;
+  display: inline-block;
+}
+
+.bonus-subtitle  {
+  font-size: 40pt;
+  bottom: 75px;
+  position: relative;
+  display: inline-block;
+    text-shadow: 0px 0px 0 #3f3f3f,
+                 1px 1px 0 #3f3f3f,
+                 2px 2px 0 #3f3f3f,
+                 3px 3px 0 #3f3f3f,
+                 4px 4px 0 #542437FF,
+                 5px 5px 0 #542437FF,
+                 6px 6px 0 #542437FF,
+                 7px 7px 0 #EBA42BFF,
+                 8px 8px 0 #EBA42BFF,
+                 9px 9px 0 #EBA42BFF,
+                 10px 10px  0 #EBA42BFF,
+                 11px 11px 10px #EBA42BFF,
+                 11px 11px 1px #EBA42BFF,
+                 0px 0px 10px #EBA42BFF;
+
+}
+
+
+.author {
+  font-size: 28pt;
+  font-family: 'Mrs Sheppards', Yellowtail, 'Mr Dafoe', Condiment, Roboto, Sans ;
+  position: relative;
+  color: #21191A;
+  bottom: 100px;
+  margin-bottom: 50px;
+  display: inline-block;
+}
+
+.institute {
+  font-size: 12pt;
+  color: #21191A;
+}
+
+.date {
+  font-size: 12pt;
+  color: #21191A;
+}
+
+/*fontawesome*/
+
+.fa, .far, .fas, .fab {
+  color: #EBA42BFF;
+  text-shadow: 0 0 10px #EBA42BFF;
+}
+
+/* DT */
+div .datatables {
+  font-size: 12pt;
+}
+
+
+/* other special slides*/
+
+.other-stuff {
+  font-size: 16pt;
+}
+
+.last-slide {
+  background-image: url(img/zoom.gif);
+  background-size: cover;
+}
+
+.img-slide {
+  color: #3f3f3f;
+}
+
+.img-slide-less-pad {
+  color: #3f3f3f;
+  padding-left: 20px;
+}
+
+.img-slide-from-doc {
+  color: #3f3f3f;
+  background-color: #fffff8;
+}
+
+.slide-less-pad {
+  padding-left: 20px;
+}
+
+
+.slide-title-90 h1 {
+  font-size: 140%;
+}
+
+.slide-font-75  {
+  font-size: 75%;
+}
+
+.slide-font-66  {
+  font-size: 66%;
+}
+
+.slide-font-50  {
+  font-size: 50%;
+}
+
+.code-only {
+  margin: 0;
+  padding: 0 0 0 20px;
+  background-color: #3f3f3f; /* zenburn*/
+}
+
+.code-only pre, .code-only code {
+  color: #d6d6d6;
+}
+
