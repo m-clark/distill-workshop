@@ -182,64 +182,106 @@ class: inverse
 
 # Starting Out
 
+Let's try it out for ourselves!
 
-```
+
 ---
-title: "My Amazing Article"
-description: |
-  Other cool stuff
-author:
-  - name: Michael Clark
-    url: https://m-clark.github.io
-    affiliation: CSCAR
-    affiliation_url: https://cscar.research.umich.edu/
-date: `r Sys.Date()`
-output:
-  distill::distill_article:
-    toc: true
-css: styles.css
+class: inverse 
+
+# Summary of Article Features
+
+- Nice, clean look from the start
+- Geared toward scientific presentation
+- Good support for citations, and making your work easily citable
+- Code is clean and linkable
+- Multiple visualization layout options
+
+
+
 ---
+class: inverse middle center animated rollIn rollOut # https://animate.style/
 
 
-```
+# Websites!
+
+
+
+
+
+
+---
+class: inverse 
+
+# Websites
+
+Besides articles, you can create your own blog/website with distill.
+
+Requirement:
+- Somewhere to host it
+
+
+
+---
+class: inverse 
+
+# GitHub
+
+I use GitHub!
+
+<img src="img/octocat.png" style="display:block; margin: 0 auto; width: 50%">
+
+
+---
+class: inverse 
+
+# GitHub
+
+Why?
+
+- A programming oriented community 💻
+- Lots of data science 📈
+- Lots of <i class="fab fa-r-project"></i> users 
+- Did I mention... free? 💵
+
+Every repository you create will automatically be linkable from your site.
+
+
+---
+class: inverse 
+
+# My approach
+
+Blog post:
+
+- Basic distill article with some extras
+- Draft mode (don't publish until ready)
+- Tags, Categories, etc.
+
+Bookdown:
+- Create a repo
+- Create a bookdown document
+- Now linkable 
+      - m-clark.github.io/new_bookdown/
+
+Slides, or any other doc... same as bookdown
+
+---
+class: inverse 
+
+# Websites
+
+Some additional files required:
+
+_site.yaml
+- Controls navbar and layout
+
+Your own custom css
+
+*.nojekyll* (empty file to keep GitHub from using defaults)
 
 
 ---
 class: inverse 
 
 # Title
-
-
-
----
-class: inverse 
-
-# Title
-
-
-
----
-class: inverse 
-
-# Title
-
-
-
----
-class: inverse 
-
-# Title
-
-
-
----
-class: inverse 
-
-# Features I like
-
-- Asides
-- Nice citations
-- Interesting figure layout
-
-
 

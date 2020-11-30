@@ -67,12 +67,12 @@ h1, h2, h3, h4, h5 {
 
 /* background of slide */
 .remark-slide-container {
-    display: block;
-    background-color: #422B3AFF;
+  display: block;
+  background-color: #422B3AFF;
 }
 
 .remark-slide-scaler {
-    box-shadow: 0 0 30px #EBA42BFF;
+  box-shadow: 0 0 30px #EBA42BFF;
 }
 
 .remark-code, .remark-inline-code { 
@@ -139,7 +139,7 @@ div.center {
   font-size: 28pt;
   position: relative;
   color: #57B4AEFF;
-  bottom: 75px;
+  bottom: 82.5px;
   display: inline-block;
 }
 
