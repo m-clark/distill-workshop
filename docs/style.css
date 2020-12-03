@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5 {
 
 .title-slide h1, h2, h3 {
   font-family: Audiowide;
-  text-shadow: 0 0 10px #FF4E86;
+  text-shadow: 0 0 10px #FF4E86 !important;
 }
 
 .title-slide .remark-slide-number {
@@ -135,6 +135,7 @@ div.center {
   bottom: 50px;
   display: inline-block;
 }
+
 .subtitle {
   font-size: 28pt;
   position: relative;

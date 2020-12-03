@@ -139,15 +139,6 @@ From RStudio:
 
 
 
----
-class: inverse
-
-# Examples
-
-
-```{r out.width='75%', eval=TRUE}
-knitr::include_graphics('img/example_websites.png')
-```
 
 
 ---
@@ -206,7 +197,15 @@ class: inverse middle center animated rollIn rollOut # https://animate.style/
 
 
 
+---
+class: inverse animated zoomIn
 
+# Examples
+
+
+```{r out.width='75%', eval=TRUE}
+knitr::include_graphics('img/example_websites.png')
+```
 
 
 ---
@@ -214,7 +213,11 @@ class: inverse
 
 # Websites
 
-Besides articles, you can create your own blog/website with distill.
+Besides articles, you can create your own blog/website with Distill.
+
+Why?
+- Professional requirement
+- Blogging can help you, help others
 
 Requirement:
 - Somewhere to host it
@@ -222,11 +225,11 @@ Requirement:
 
 
 ---
-class: inverse 
+class: inverse center animated bounceIn bounceOut
 
-# GitHub
+# I Use GitHub!
 
-I use GitHub!
+
 
 <img src="img/octocat.png" style="display:block; margin: 0 auto; width: 50%">
 
@@ -277,7 +280,8 @@ _site.yaml
 
 Your own custom css
 
-*.nojekyll* (empty file to keep GitHub from using defaults)
+*.nojekyll*
+- empty file to keep GitHub from using defaults
 
 
 ---
