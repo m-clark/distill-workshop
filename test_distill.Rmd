@@ -10,28 +10,28 @@ author:
 date: '`r Sys.Date()`'
 output:
   distill::distill_article:
-    highlight: default
-    highlight_downlit: FALSE
+    # highlight: default
+    # highlight_downlit: TRUE
     toc: true
 # css: docs/style.css
 bibliography: biblio.bib
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(
-  echo      = T, 
-  eval      = T, 
-  message   = F, 
-  warning   = F, 
-  comment   = NA,
-  R.options = list(width = 120),
-  cache.rebuild = F,
-  cache = T,
-  fig.align = 'center',
-  fig.asp = .7,
-  dev = 'svg',
-  dev.args = list(bg = 'transparent')
-)
+# knitr::opts_chunk$set(
+#   echo      = T, 
+#   eval      = T, 
+#   message   = F, 
+#   warning   = F, 
+#   comment   = NA,
+#   R.options = list(width = 120),
+#   cache.rebuild = F,
+#   cache = T,
+#   fig.align = 'center',
+#   fig.asp = .7,
+#   dev = 'svg',
+#   dev.args = list(bg = 'transparent')
+# )
 
 library(tidyverse)
 ```
@@ -42,11 +42,179 @@ library(tidyverse)
 
 # Part 1: Basics
 
+
+## Text
+
+All the basic R Markdown stuff holds for text.
+
+
+#### Emphasis
+
+`*italic*   **bold**`
+
+`_italic_   __bold__`
+
+#### Headers
+
+`# Header 1`
+
+`## Header 2`
+
+`### Header 3`
+
+#### Lists
+
+Unordered List:
+
+```
+* Item 1
+* Item 2
+    + Item 2a
+    + Item 2b
+```
+
+Ordered List:
+
+```
+1. Item 1
+2. Item 2
+3. Item 3
+    + Item 3a
+    + Item 3b
+```
+
+
+#### Links
+
+Use a plain http address or add a link to a phrase:
+
+```
+http://example.com
+
+[linked phrase](http://example.com)
+```
+
+#### Images
+
+Images on the web or local files in the same directory:
+
+```
+![](http://example.com/logo.png)
+
+![optional caption text](figures/img.png)
+```
+
+#### Blockquotes
+
+A friend once said:
+
+> It's always better to give
+> than to receive.
+
+Plain Code Blocks
+
+Plain code blocks are displayed in a fixed-width font but not evaulated
+
+```
+This text is displayed verbatim / preformatted
+```
+
+#### Inline Code
+
+```
+We defined the `add` function to
+compute the sum of two numbers.
+```
+
+#### LaTeX Equations
+
+Inline equation:
+
+```
+$equation$
+```
+Display equation:
+
+```
+$$ equation $$
+```
+
+
+#### Horizontal Rule / Page Break
+
+Three or more asterisks or dashes:
+```
+******
+
+------
+```
+
+#### Tables
+
+```
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+Reference Style Links and Images
+```
+
+
+
+#### Manual Line Breaks
+
+End a line with two or more spaces, or just hit return twice.
+
+```
+Roses are red,  
+Violets are blue.
+```
+
+#### Miscellaneous
+
+```
+superscript^2^
+
+~~strikethrough~~
+```
+
+
+
 ## Code
 
-Time for code!  Already looks nice! By default, highlighting is done using colors optimized for accessibility and color contrast.
+Time for code! Again, basic R Markdown is the starting point.
 
 ```{r}
+cat("```{r}
+summary(cars$dist)
+summary(cars$speed)
+```")
+```
+
+Inline R Code
+
+```{r}
+cat("
+There were `r nrow(cars)` cars studied
+")
+```
+
+
+
+Try a chunk yourself!
+
+```{r}
+cat("```{r}
+x = sample(letters, 5)
+
+x
+``` ")
+```
+
+
+Don't see the code? By default, Distill sets `echo = FALSE`, which means the code will not be shown. Why? The primary goal of the format is *communication of ideas*, not code.  Just switch it to `TRUE`
+
+```{r echo=TRUE}
 library(tidyverse)
 
 x = rlogis(1000)
@@ -54,10 +222,30 @@ x = rlogis(1000)
 qplot(sort(x), plogis(sort(x)), ylab = 'Probability', geom = 'line')
 ```
 
+Already looks nice! By default, highlighting is done using colors optimized for accessibility and color contrast.
+
+## Tables
+
+
+Easily create a nice table without the fuss!
+
+```{r, echo=TRUE}
+rmarkdown::paged_table(mtcars)
+```
+
 ## Visualization
 
 
-```{r}
+### Distill Layouts
+
+- l-body
+- l-body-outset
+- l-page
+- l-screen
+
+#### l-body
+
+```{r, echo=TRUE}
 library(leaflet)
 
 leaflet(options = leafletOptions(minZoom = 2, maxZoom = 15)) %>%
@@ -70,16 +258,11 @@ leaflet(options = leafletOptions(minZoom = 2, maxZoom = 15)) %>%
              popup = "The birthplace of R")
 ```
 
-### Distill Layouts
-
-- l-body
-- l-body-outset
-- l-page
-- l-screen
 
 
-Note: If you are like me, you will probably never remember these names.
+Note: If you are like me, you will probably never remember these names, so be prepared to look it up.
 
+#### l-body-outset
 
 ```{r, layout = 'l-body-outset'}
 library(leaflet)
@@ -94,6 +277,8 @@ leaflet(options = leafletOptions(minZoom = 2, maxZoom = 15)) %>%
              popup = "The birthplace of R")
 ```
 
+#### l-page
+
 ```{r, layout = 'l-page'}
 library(leaflet)
 
@@ -106,6 +291,9 @@ leaflet(options = leafletOptions(minZoom = 2, maxZoom = 15)) %>%
              lat   = -36.852,
              popup = "The birthplace of R")
 ```
+
+
+#### l-screen
 
 ```{r, layout = 'l-screen'}
 library(leaflet)
@@ -140,22 +328,22 @@ leaflet(options = leafletOptions(minZoom = 2, maxZoom = 15)) %>%
 
 Reference figures by chunk name, **as long as they also have a caption**.  For example, if the chunk is named 'aspect-ratio-demo', then `\@ref(fig:aspect-ratio-demo)` would reference it. For example, see figure \@ref(fig:aspect-ratio-demo).
 
-## Tables
+
+### Other stuff
+
+Note that for smaller screens, you may not see a difference for the larger sizes.
 
 
-Easily create a nice table without the fuss!
-
-```{r, echo=FALSE}
-rmarkdown::paged_table(mtcars)
-```
-
-
-
-# Part 2: Miscellaneous Niceties
+# Part 2: Miscellaneous Cool Stuff
 
 ## Citations
 
 Create a file of your chosen type and point to it in the YAML.
+
+Text/inline code:
+`Look at this citation- @clark-models, or these [@clark-pds; @clark-iml; @brms].`
+
+Result:
 
 Look at this citation- @clark-models, or these [@clark-pds; @clark-iml; @brms].
 
@@ -168,9 +356,19 @@ Include in your YAML:
 - `date`
 - `citation_url`
 
+See the bottom of this page!
+
+
 ## Footnotes and asides
 
 Here is a footnote[^footnote].  They can be clicked or just hovered over.
+
+
+How to do it:
+
+`Here is a footnote[^footnote].  They can be clicked or just hovered over.`
+`[^footnote]: Hey! It's a footnote!`   $\rightarrow$  *This can be anywhere in the document.*
+
 
 Asides are one of the best features of distill.
 

@@ -257,7 +257,7 @@ class: inverse
 Blog post:
 
 - Basic distill article with some extras
-- Draft mode (don't publish until ready)
+- Draft mode (don't publish until ready!)
 - Tags, Categories, etc.
 
 Bookdown:
