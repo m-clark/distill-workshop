@@ -1,0 +1,44 @@
+---
+title: "Title"
+# description: |
+#   Other stuff
+author:
+  - name: Michael Clark
+    url: https://m-clark.github.io
+# date: `r Sys.Date()`
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+# css: ../../styles.css
+# bibliography: cites.bib
+# nocite:  | 
+#   @whatever
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo      = TRUE, 
+  eval      = TRUE, 
+  message   = FALSE,
+  warning   = FALSE,
+  comment   = NA,
+  R.options = list(width = 120),
+  cache.rebuild = FALSE,
+  cache = F,
+  fig.align = 'center',
+  fig.asp = .7,
+  dev = 'svg',
+  dev.args = list(bg = 'transparent')
+)
+
+library(tidyverse)
+```
+
+
+```{python}
+import numpy as np
+
+np.random.norm(1)
+```
+

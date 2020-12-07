@@ -26,9 +26,6 @@ h1, h2, h3, h4, h5 {
   color: #b20076;
 }
 
-.tidyverse {
-  background-size: cover;
-}
 
 .title-slide {
   background-image: url(img/mountains.jpg);
@@ -131,7 +128,7 @@ div.center {
   margin-bottom: 0;
   font-size: 50pt;  
   position: relative;
-  color: #CB54D6;
+  color: #fc00eebf;
   bottom: 50px;
   display: inline-block;
 }
@@ -171,15 +168,17 @@ div.center {
   font-size: 28pt;
   font-family: 'Mrs Sheppards', Yellowtail, 'Mr Dafoe', Condiment, Roboto, Sans ;
   position: relative;
-  color: #21191A;
+  color: #030720; /* color from color picker of image */
   bottom: 100px;
   margin-bottom: 50px;
   display: inline-block;
+  text-shadow: 0 5px 10px #3e5485; /* color from color picker of image */
 }
 
 .institute {
   font-size: 12pt;
-  color: #21191A;
+  color: #363e6d;
+  text-shadow: 0 0 10px #fc00ee; /* color from color picker of image */
 }
 
 .date {

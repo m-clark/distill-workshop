@@ -106,6 +106,18 @@ class: inverse middle center
 
 
 ---
+class: inverse 
+
+# Goals
+
+- To demonstrate a Distill article
+  - Can be used as default Rmd
+  - Serves as basis for website
+  
+- Have knowledge of what it offers over other formats
+- Provide an overview of building a website
+
+---
 class: inverse middle center animated rollIn rollOut # https://animate.style/
 
 
@@ -248,6 +260,24 @@ Why?
 
 Every repository you create will automatically be linkable from your site.
 
+---
+class: inverse 
+
+# What You Need for GitHub
+
+- An account
+- A repository for your website called account-name.github.io
+- Change settings of repo to do GitHub pages
+
+---
+class: inverse 
+
+# What You Need for a Distill Website
+
+- Create a new RStudio project
+- Choose Distill website
+
+![](img/create-website.png)
 
 ---
 class: inverse 
@@ -256,9 +286,17 @@ class: inverse
 
 Blog post:
 
-- Basic distill article with some extras
+- Basic distill article with some extras 
+    - in the `_posts` directory
 - Draft mode (don't publish until ready!)
 - Tags, Categories, etc.
+- When ready, 'build' the site
+    - Same as you would an R package
+
+---
+class: inverse 
+
+# My approach
 
 Bookdown:
 - Create a repo
@@ -275,14 +313,16 @@ class: inverse
 
 Some additional files required:
 
-_site.yaml
-- Controls navbar and layout
+- *_site.yaml*
+    - Controls navbar and layout
+    - Set the output_dir within _site.yml to match the repository directory your site is served from. (e.g. `"."`)
 
-Your own custom css
+- *.nojekyll*
+    - empty file to keep GitHub from using defaults
 
-*.nojekyll*
-- empty file to keep GitHub from using defaults
 
+
+- Use a Distill them or your own custom css
 
 ---
 class: inverse 

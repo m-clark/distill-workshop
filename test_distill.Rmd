@@ -108,22 +108,16 @@ Images on the web or local files in the same directory:
 
 A friend once said:
 
+```
 > It's always better to give
 > than to receive.
-
-Plain Code Blocks
-
-Plain code blocks are displayed in a fixed-width font but not evaulated
-
 ```
-This text is displayed verbatim / preformatted
-```
+
 
 #### Inline Code
 
 ```
-We defined the `add` function to
-compute the sum of two numbers.
+Here are the numbers `r 1:3`.
 ```
 
 #### LaTeX Equations
@@ -201,7 +195,7 @@ There were `r nrow(cars)` cars studied
 
 
 
-Try a chunk yourself!
+Try a chunk yourself! Knit the result!
 
 ```{r}
 cat("```{r}
@@ -212,7 +206,7 @@ x
 ```
 
 
-Don't see the code? By default, Distill sets `echo = FALSE`, which means the code will not be shown. Why? The primary goal of the format is *communication of ideas*, not code.  Just switch it to `TRUE`
+Don't see the code? By default, Distill sets `echo = FALSE`, which means the code will not be shown. Why? The primary goal of the format is *communication of ideas*, not code.  Just switch the chunk option to `TRUE`.
 
 ```{r echo=TRUE}
 library(tidyverse)
@@ -222,7 +216,7 @@ x = rlogis(1000)
 qplot(sort(x), plogis(sort(x)), ylab = 'Probability', geom = 'line')
 ```
 
-Already looks nice! By default, highlighting is done using colors optimized for accessibility and color contrast.
+Already looks nice! By default, highlighting is done using colors optimized for accessibility and color contrast.  Many functions are linked to documentation. You can control whether you want that in the YAML options.
 
 ## Tables
 
