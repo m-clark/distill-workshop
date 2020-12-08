@@ -43,7 +43,7 @@ library(tidyverse)
 # Part 1: Basics
 
 
-## Text
+## Standard Markdown
 
 All the basic R Markdown stuff holds for text.
 
@@ -53,6 +53,7 @@ All the basic R Markdown stuff holds for text.
 `*italic*   **bold**`
 
 `_italic_   __bold__`
+
 
 #### Headers
 
@@ -117,8 +118,10 @@ A friend once said:
 #### Inline Code
 
 ```
-Here are the numbers `r 1:3`.
+Here are the numbers `r paste('\x60r 1:3\x60')`.
 ```
+
+
 
 #### LaTeX Equations
 
@@ -137,6 +140,7 @@ $$ equation $$
 #### Horizontal Rule / Page Break
 
 Three or more asterisks or dashes:
+
 ```
 ******
 
@@ -353,7 +357,7 @@ Include in your YAML:
 See the bottom of this page!
 
 
-## Footnotes and asides
+## Footnotes
 
 Here is a footnote[^footnote].  They can be clicked or just hovered over.
 
@@ -363,6 +367,8 @@ How to do it:
 `Here is a footnote[^footnote].  They can be clicked or just hovered over.`
 `[^footnote]: Hey! It's a footnote!`   $\rightarrow$  *This can be anywhere in the document.*
 
+
+## Asides
 
 Asides are one of the best features of distill.
 

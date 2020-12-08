@@ -98,11 +98,10 @@ library(scico)
 class: inverse middle center
 
 
-### **Overview**
-### **Basic Article**
-### **Features**
-### **Visualization**
-### **Building a Website**
+### **Introduction**
+### **Basic Article Features**
+### **Demonstration**
+### **Overview of Websites**
 
 
 ---
@@ -123,10 +122,10 @@ class: inverse middle center animated rollIn rollOut # https://animate.style/
 
 # What is Distill?
 
-
-```{r out.width='75%', eval=TRUE}
-knitr::include_graphics('img/RMarkdownOutputFormats.png')
+```{r out.width='66%', eval=TRUE}
+knitr::include_graphics('img/distill-hex.png')
 ```
+
 
 
 
@@ -234,7 +233,25 @@ Why?
 Requirement:
 - Somewhere to host it
 
+---
+class: inverse middle center
 
+# Publishing Options
+
+
+RStudio Connect
+
+GitHub Pages
+
+Netlify
+
+Google Firebase
+
+Site44 (Dropbox)
+
+Amazon S3
+
+Other services
 
 ---
 class: inverse center animated bounceIn bounceOut
@@ -268,6 +285,12 @@ class: inverse
 - An account
 - A repository for your website called account-name.github.io
 - Change settings of repo to do GitHub pages
+
+---
+class: inverse 
+
+
+
 
 ---
 class: inverse 
@@ -322,10 +345,23 @@ Some additional files required:
 
 
 
-- Use a Distill them or your own custom css
+- Use a Distill theme or your own custom css
 
 ---
-class: inverse 
+class: inverse middle center animated rollIn rollOut # https://animate.style/
 
-# Title
+# Enjoy Distill!
 
+.pull-left[
+
+```{r  eval=TRUE}
+knitr::include_graphics('img/RMarkdownOutputFormats.png')
+```
+]
+
+.pull-right[
+```{r  eval=TRUE}
+knitr::include_graphics('img/distill-hex.png')
+```
+
+]
