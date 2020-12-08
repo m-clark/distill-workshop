@@ -37,3 +37,6 @@ vignettes/*.pdf
 *.knit.md
 
 .DS_Store
+
+# demo website
+test_website
